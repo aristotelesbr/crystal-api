@@ -5,7 +5,7 @@ services:
     build: .
     image: app
     environment:
-      DATABASE_URL: postgres://admin:password@db:5432/blog_development
+      DATABASE_URL: postgres://postgres:postgres@0.0.0.0:5432/crystal_api/?sslmode=disable
     ports:
       - '3000:3000'
     depends_on:
