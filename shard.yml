@@ -1,0 +1,30 @@
+name: api
+version: 0.1.0
+
+# authors:
+#   - name <email@example.com>
+
+# description: |
+#   Short description of api
+
+# dependencies:
+dependencies:
+  kemal:
+    github: kemalcr/kemal
+    version: "~> 1.4.0"
+  sam:
+    github: imdrasil/sam.cr
+    version: 0.4.2
+  pg:
+    github: will/crystal-pg
+    version: "~> 0.5"
+  jennifer:
+    github: imdrasil/jennifer.cr
+    version: "~> 0.13.0"
+
+
+# development_dependencies:
+#   webmock:
+#     github: manastech/webmock.cr
+
+# license: MIT

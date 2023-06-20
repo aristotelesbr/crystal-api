@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    image: app
+    environment:
+      DATABASE_URL: postgres://admin:password@db:5432/blog_development
+    ports:
+      - '3000:3000'
+    depends_on:
+      - db
+    volumes:
+      - '.:/crystal-api'
+
+  db:
+    image: postgres
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=crystal_api
+    ports:
+      - '127.0.0.1:5432:5432'
+    volumes:
+      - 'db:/var/lib/postgres/data'
+
+volumes:
+  db:
